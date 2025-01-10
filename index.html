@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUPP (Offcanvas and Scrollspy)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .logo {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: #f2f2f2;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .txt h1{
+            text-align: center;
+            color: #ff0000;
+            text-transform: uppercase;
+        }
+        .head {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 5px 0;
+        }
+        
+        #scholarship {
+            height: 300px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Logo Section -->
+    <div class="logo flex justify-between items-center p-4 sticky top-0 bg-pink-200 z-50">
+        <div class="image">
+            <img src="img/rupp-logo.png" alt="RUPP Logo">
+        </div>
+        <div class="txt text-center">
+            <h1 class="text-xl font-bold">Royal University of Phnom Penh</h1>
+        </div>
+    </div>
+
+    <!-- Offcanvas Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto p-4">
+            <button id="menuBtn" class="bg-red-500 text-black px-4 py-2 rounded-lg">
+                Menu
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Offcanvas Menu -->
+    <div id="offcanvasMenu" class="fixed inset-0 bg-gray-600 bg-opacity-50 z-50 hidden">
+        <div class="relative w-64 h-full bg-white p-4">
+            <div class="flex justify-between items-center">
+                <h5 class="text-xl">Navigation</h5>
+                <button id="closeBtn" class="text-gray-800">&times;</button>
+            </div>
+            <div class="mt-4">
+                <ul class="space-y-4">
+                    <li><a href="#one" class="text-lg text-gray-800 hover:text-blue-500">Faculty of Science</a></li>
+                    <li><a href="#two" class="text-lg text-gray-800 hover:text-blue-500">Faculty of Social Science and Humanities</a></li>
+                    <li><a href="#three" class="text-lg text-gray-800 hover:text-blue-500">Faculty of Engineering</a></li>
+                    <li><a href="#four" class="text-lg text-gray-800 hover:text-blue-500">Faculty of Development Studies</a></li>
+                    <li><a href="#five" class="text-lg text-gray-800 hover:text-blue-500">Faculty of Education</a></li>
+                    <li><a href="#six" class="text-lg text-gray-800 hover:text-blue-500">CENTER</a></li>
+                    <li><a href="#seven" class="text-lg text-gray-800 hover:text-blue-500">Institute of Foreign Languages</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto mt-8">
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example p-4 bg-white rounded-lg" tabindex="0">
+            <h4 id="one" class="text-2xl font-semibold">Faculty of Science</h4>
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/2 p-4">
+                    <img src="img/FOS.jpg" alt="Faculty of Science" class="w-full h-auto rounded-lg shadow-md">
+                </div>
+                <div class="w-full md:w-1/2 p-4">
+                    <div id="contactbox" class="head">
+                        <h2 class="text-xl font-semibold">Contact Info</h2>
+                        <dl>
+                            <dt><b>Meak Kamerane</b></dt>
+                            <dt class="address">Campus A, 2nd Floor, Room 214 A</dt>
+                            <dt class="phone"><b>Tel:</b> (855)-23-882-716</dt>
+                            <dt class="mobile"><b>Mobile:</b> (855)-12-876-971</dt>
+                            <dt class="fax"><b>Fax:</b> 855-23-882-716</dt>
+                            <dt class="email"><b>Email:</b> kamerane.meak(at)rupp.edu.kh</dt>
+                        </dl>
+                        <img src="https://rupp.edu.kh/images/contact.jpg" alt="" class="w-full h-auto rounded-lg shadow-md">
+                        <h3 class="text-lg font-semibold">Dean Faculty of Science</h3>
+                    </div>
+                    <div id="studentlife" class="head h-72 overflow-hidden">
+                        <h2 class="text-xl font-semibold">Student Life</h2>
+                        <img src="https://rupp.edu.kh/images/studentlife.jpg" align="left" alt="" class="w-1/3 mr-4 mb-4">
+                        <p>Foreign students who are interested in studying in Cambodia should first approach their national government. 
+                            <a href="https://rupp.edu.kh/studentlife/" class="text-blue-500">read more...</a></p>
+                    </div>
+                </div>
+            </div>
+            
+           
+
+            <!-- Faculty of Social Science and Humanities -->
+            <h4 id="two" class="text-2xl font-semibold mt-8">Faculty of Social Science and Humanities</h4>
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/2 p-4">
+                    <img src="img/FOSS.jpg" alt="Faculty of Social Science" class="w-full h-auto rounded-lg shadow-md">
+                </div>
+                <div class="w-full md:w-1/2 p-4">
+                    <div id="contactbox" class="head">
+                        <h2 class="text-xl font-semibold">Contact Info</h2>
+                        <img src="https://rupp.edu.kh/images/contact.jpg" alt="" class="w-full h-auto rounded-lg shadow-md">
+                        <h3 class="text-lg font-semibold"><b>Dean Faculty Social Science & Humanities</b></h3>
+                        <dl>
+                            <dt><b>Un Leang, Ph.D. </b></dt>
+                            <dt><b>Tel:</b> (+855) 99-505-458 </dt>
+                            <dt><b>Email:</b> fossh@rupp.edu.kh</dt>
+                        </dl>
+                    </div>
+                    <div id="studentlife" class="head h-72 overflow-hidden">
+                        <h2 class="text-xl font-semibold">Student Life</h2>
+                        <img src="https://rupp.edu.kh/images/studentlife.jpg" align="left" alt="" class="w-1/3 mr-4 mb-4">
+                        <p>Foreign students who are interested in studying in Cambodia should first approach their national government. 
+                            <a href="https://rupp.edu.kh/studentlife/" class="text-blue-500">read more...</a></p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Faculty of Engineering ... -->
+            <h4 id="three" class="text-2xl font-semibold mt-8">Faculty of Engineering</h4>
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/2 p-4">
+                    <img src="img/FOE.jpg" alt="Faculty of Engineering" class="w-full h-auto rounded-lg shadow-md">
+                    <p>
+                        There are 5 departments in Faculty of Engineering <br>
+                        1. Department of Information Technology Engineering<br>
+                            &nbsp;&nbsp;&nbsp; - Major Bachelor in Engineering in Information Technology Engineering <br>
+                            &nbsp;&nbsp;&nbsp; - Major Bachelor in Engineering in Data Science and Engineering (Taught in English)<br>
+                        2. Department of Telecommunication and Electronic Engineering<br>   
+                            &nbsp;&nbsp;&nbsp; - Major Bachelor in Engineering in Telecommunication and Electronic Engineering<br>
+                        3. Department of Bio Engineering<br>
+                            &nbsp;&nbsp;&nbsp; - Major Bachelor in Engineering in Bio-Engineering (Taught in English)<br>
+                            &nbsp;&nbsp;&nbsp; - Major Bachelor in Engineering in Food Technology and Engineering<br>
+                        4. Department of Automation & Supply Chain Systems Engineering<br>
+                            &nbsp;&nbsp;&nbsp; - Major Bachelor in Engineering in Automation & Supply Chain Systems Engineering (Taught in English)<br>
+                        5. Department of Environmental Engineering<br>
+                            &nbsp;&nbsp;&nbsp; - Major Bachelor in Engineering in Environmental Engineering (Taught in English)
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 p-4">
+                    <div id="contactbox" class="head">
+                        <h2 class="text-xl font-semibold">Contact Info</h2>
+                        <img src="https://rupp.edu.kh/images/contact.jpg" alt="" class="w-full h-auto rounded-lg shadow-md">
+                        
+                        <dl>
+                            <dt><b>Email: fe.info(at)rupp.edu.kh</b></dt>
+                            <dt><b>Romm #103,STEM Building, Campus I</b></dt>
+                            <dt><b>facebook page: fb.me/rupp.fe</b></dt>
+                        </dl>
+                    </div>  <!-- <p style="font-size: 12px; font-weight:bold; color: blue;">For more information: <a href="http://www.ferupp.com" target="_blank" title="Visit ferupp.com"> Please click here</a></p> -->
+                </div>
+                
+            </div>
+
+            <!-- Faculty of Development Studies -->
+            <h4 id="four" class="text-2xl font-semibold">Faculty of Development Studies</h4>
+            <div class="flex flex-wrap">
+                <!-- Image Section -->
+                <div class="w-full md:w-1/2 p-4">
+                    <img src="img/FODS.jpg" alt="Faculty of Development Studies" class="w-full h-auto rounded-lg">
+                </div>
+
+                <!-- Contact Info Section -->
+                <div class="w-full md:w-1/2 p-4">
+                    <div id="contactbox" class="head">
+                        <h2 class="text-xl font-semibold">Contact Info</h2>
+                        <img src="https://rupp.edu.kh/images/contact.jpg" alt="" class="w-full h-auto rounded-lg mb-4">
+                        <h3 class="text-lg font-bold">Dean, Faculty of Development Studies (FDS)</h3>
+                        <dl class="mt-4">
+                            <dt><b>Rath Sethik,</b> PhD</dt>
+                            <dt class="tel"><b>Tel:</b> (855)12 556 579</dt>
+                            <dt class="email"><b>Email:</b> rath.sethik@rupp.edu.kh</dt>
+                        </dl>
+
+                        <h3 class="text-lg font-bold mt-6">Vice dean of FDS</h3>
+                        <dl class="mt-4">
+                            <dt><b>Heng Naret,</b> PhD</dt>
+                            <dt><b>Tel:</b> (855)12 830 386</dt>
+                            <dt><b>Email:</b> heng.naret@rupp.edu.kh</dt>
+                        </dl>
+                        <dl class="mt-4">
+                            <dt><b>Seak Sophat,</b> PhD</dt>
+                            <dt><b>Tel:</b> (855)16 506 888</dt>
+                            <dt><b>Email:</b> seak.sophat@rupp.edu.kh</dt>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <!-- Faculty of Education -->
+            <h4 id="five" class="text-2xl font-semibold mb-4">Faculty of Education</h4>
+            <div class="flex flex-wrap">
+                <!-- Left Section: Image and Description -->
+                <div class="w-full md:w-1/2 p-4">
+                    <img src="img/FoEdu.jpg" alt="Faculty of Education" class="w-full h-auto rounded-lg mb-4">
+                    <p class="text-gray-700">
+                        The Faculty of Education (FoEd) is in the process of providing courses from bachelor to doctoral degrees in the fields of educational studies, higher education studies, and life-long learning. The FoEd also provides research consultancy services and professional development short courses at its Center for Educational Research and Training to development agencies, non-governmental organizations, public and private higher education institutions, and government ministries. The successful Master of Education Program that was created in 2006 has been merged into the Faculty of Education since the proposal for the establishment of the Faculty was approved by the Ministry of Education, Youth and Sport in November 2014. Bachelor and doctoral programs will be offered in the future.
+                    </p>
+                </div>
+            
+                <!-- Right Section: Contact Info -->
+                <div class="w-full md:w-1/2 p-4">
+                    <div id="contactbox" class="head">
+                        <h2 class="text-xl font-semibold mb-4">Contact Info</h2>
+                        <img src="https://rupp.edu.kh/images/contact.jpg" alt="" class="w-full h-auto rounded-lg mb-4">
+                        <dl class="space-y-4">
+                            <dt class="name text-lg font-bold"><b>Dr. Sok Soth</b><br><i>Dean</i></dt>
+                            <dt class="address text-gray-600">210B, Building A, Royal University of Phnom Penh</dt>
+                            <dt class="email text-gray-700"><b>Email:</b> sok.soth@rupp.edu.kh</dt>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <!-- CENTER -->
+            <h4 id="six" class="text-2xl font-semibold mb-4">CENTER</h4>
+            <div class="flex flex-wrap">
+                <!-- Left Section: Image -->
+                <div class="w-full md:w-1/2 p-4">
+                    <img src="img/center.jpg" alt="CENTER" class="w-full h-auto rounded-lg mb-4">
+                </div>
+            
+                <!-- Right Section: Scholarship -->
+                <div class="w-full md:w-1/2 p-4">
+                    <div id="scholarship" class="head">
+                        <h2 class="text-xl font-semibold mb-4">Scholarship</h2>
+                        <img src="https://rupp.edu.kh/images/scholarship.jpg" alt="" class="w-1/3 mr-4 mb-4 float-left">
+                        <p class="text-gray-700">
+                            For students who are looking for a scholarship, RUPP provides a number of sources of scholarships. 
+                            <a href="https://rupp.edu.kh/scholarship/" title="go to scholarship page" class="text-blue-500 hover:underline">read more...</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Institute of Foreign Languages -->
+            <h4 id="seven" class="text-2xl font-semibold mb-4">Institute of Foreign Languages</h4>
+            <div class="flex flex-wrap">
+                <!-- Left Section: Image and Description -->
+                <div class="w-full md:w-1/2 p-4">
+                    <img src="img/FlagIMG.png" alt="Institute of Foreign Languages" class="w-full h-auto rounded-lg mb-4">
+                    <p class="text-gray-700">
+                        Royal University of Phnom Penh (RUPP) hosts around 22,000 students in undergraduate and postgraduate programs. It offers degrees in fields such as sciences, humanities and social sciences, engineering, education, and foreign languages.<br><br>
+                        RUPP provides Cambodia's foremost degree-level language programs through the Institute of Foreign Languages (IFL) . RUPP has full membership in the ASEAN University Network (AUN).<br><br>
+                        There are currently 6 departments at the Institute of Foreign Languages, namely Department of English, French, Japanese, Korean, Chinese, and Thai. Currently, there are about 5,000 students studying at IFL.<br><br>
+                        RUPP has one main library – Hun Sen Library. It was opened on the 7th of January 1997 by Prime Minister Hun Sen. The library has a collection of more than 100,000 volumes in Khmer, English and French, and some volumes in Japanese, Thai, Chinese and Vietnamese, as well as smaller collections of videos, audio cassettes, CDs/DVDs and electronic resources.<br><br>
+                        IFL also has its own library called Self-Access Centre (SAC) with a collection of about 11,000 volumes in English, French, Chinese, Japanese, Korean and Thai languages. The SAC houses an extensive collection of reading, listening and video kits for language and vocabulary skills development. The center also holds a significant collection relating to general education subjects taken in the Foundation Year.
+                    </p>
+                </div>
+            
+                <!-- Right Section: Contact Info, Student Life, and Scholarship -->
+                <div class="w-full md:w-1/2 p-4">
+                    <div id="contactbox" class="head mb-8">
+                        <h2 class="text-xl font-semibold mb-4">Contact Info</h2>
+                        <img src="http://www.rupp.edu.kh/images/contact.jpg" alt="" class="w-full h-auto mb-4">
+                        <dl class="mb-4">
+                            <dt class="font-bold"><b>Tel:</b> (855) 23-885-419</dt>
+                            <dt class="font-bold"><b>Email:</b> info.ifl@rupp.edu.kh</dt>
+                        </dl>
+                        <h3 class="text-lg font-semibold mb-2">Director of IFL</h3>
+                        <dl class="mb-4">
+                            <dt class="font-bold"><b>Mr. Tith Mab</b></dt>
+                            <dt><b>Email:</b> tith.mab@rupp.edu.kh</dt>
+                        </dl>
+                        <h3 class="text-lg font-semibold mb-2">Deputy Directors of IFL</h3>
+                        <dl class="mb-4">
+                            <dt class="font-bold"><b>Mrs. Loch Leaksmy</b></dt>
+                            <dt><b>Email:</b> loch.leaksmy@rupp.edu.kh</dt>
+                        </dl>
+                        <dl class="mb-4">
+                            <dt class="font-bold"><b>Dr. Vann Moniroth</b></dt>
+                            <dt><b>Email:</b> vann.moniroth@rupp.edu.kh</dt>
+                        </dl>
+                        <dl class="mb-4">
+                            <dt class="font-bold"><b>Mr. Om Soryong</b></dt>
+                            <dt><b>Email:</b> om.soryong@rupp.edu.kh</dt>
+                        </dl>
+                        <dl class="mb-4">
+                            <dt class="font-bold"><b>Mr. Om Soryong</b></dt>
+                            <dt><b>Email:</b> om.soryong@rupp.edu.kh</dt>
+                        </dl>
+                        <h3 class="text-lg font-semibold mb-2">Deputy Head of Studies Office</h3>
+                        <dl>
+                            <dt class="font-bold"><b>Mrs. Pauv Ampor</b></dt>
+                            <dt><b>Email:</b> pauv.ampor@rupp.edu.kh</dt>
+                        </dl>
+                    </div>
+            
+                    <div id="studentlife" class="head mb-8">
+                        <h2 class="text-xl font-semibold mb-4">Student Life</h2>
+                        <img src="https://rupp.edu.kh/images/studentlife.jpg" align="left" class="w-1/3 mr-4 mb-4">
+                        <p>
+                            Foreign students who are interested in studying in Cambodia should first approach their national government. 
+                            <a href="https://rupp.edu.kh/studentlife/" class="text-blue-500 hover:underline">read more...</a>
+                        </p>
+                    </div>
+            
+                    <div id="scholarship" class="head">
+                        <h2 class="text-xl font-semibold mb-4">Scholarship</h2>
+                        <img src="https://rupp.edu.kh/images/scholarship.jpg" align="left" class="w-1/3 mr-4 mb-4">
+                        <p>
+                            For students who are looking for a scholarship, RUPP provides a number of sources of scholarships. 
+                            <a href="https://rupp.edu.kh/scholarship/" class="text-blue-500 hover:underline">read more...</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer bg-pink-200 text-center p-6">
+        <p>RUPP</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script>
+    // Get the button that opens the menu
+    const menuBtn = document.getElementById('menuBtn');
+    // Get the offcanvas menu and close button
+    const offcanvasMenu = document.getElementById('offcanvasMenu');
+    const closeBtn = document.getElementById('closeBtn');
+
+    // When the menu button is clicked, show the offcanvas
+    menuBtn.addEventListener('click', () => {
+        offcanvasMenu.classList.remove('hidden');
+    });
+
+    // When the close button is clicked, hide the offcanvas
+    closeBtn.addEventListener('click', () => {
+        offcanvasMenu.classList.add('hidden');
+    });
+
+    // You can also close the menu by clicking outside of it
+    offcanvasMenu.addEventListener('click', (e) => {
+        if (e.target === offcanvasMenu) {
+            offcanvasMenu.classList.add('hidden');
+        }
+    });
+</script>
